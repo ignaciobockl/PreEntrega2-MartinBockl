@@ -1,0 +1,148 @@
+:root {
+  --bg-black: black;
+  --bg-white: white;
+  --bg-color: lightsteelblue;
+  --bg-color2: lightblue;
+}
+
+* {
+  background-color: var(--bg-color);
+  color: --bg-black;
+  margin: 0;
+  padding: 0;
+}
+
+/* GRID */
+.grid_container {
+  display: grid;
+}
+
+.footer {
+    background-color: var(--bg-color2);
+}
+
+.footer_frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav,
+ul,
+li,
+a {
+  background-color: var(--bg-color2);
+  color: black;
+  font-weight: bold;
+}
+
+.noAzul {
+  color: black;
+  text-decoration: none;
+}
+
+.noAzul :hover {
+  font-weight: bold;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .grid_container {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    grid-template-rows: 100px auto auto auto;
+
+    grid-template-areas:
+      'Header'
+      'Nav'
+      'Presentation'
+      'Footer';
+  }
+
+  .header {
+    grid-area: 'Header';
+    padding: 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header_flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .header_img {
+    height: 75px;
+    margin-right: 20px;
+  }
+
+  .nav {
+    /* background-color: lightsteelblue; */
+    grid-area: 'Nav';
+
+    display: flex;
+    justify-content: center;
+
+    border: 1px solid;
+  }
+
+  .nav ul {
+    padding-left: 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul {
+    padding-top: 15px;
+  }
+
+  ul > li {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  li > a {
+    text-decoration: none;
+  }
+
+  .presentation {
+    /* background-color: lightgreen; */
+    grid-area: 'Presentation';
+    padding: 10px;
+    color: rgb(44, 22, 22);
+    font-weight: bold;
+  }
+
+  .footer {
+    /* background-color: lightcoral; */
+    grid-area: 'Footer';
+    padding: 10px;
+
+    /* Flexbox */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer div > h4 {
+    margin-bottom: 10px;
+  }
+
+  .footer div {
+    margin-top: 12px;
+  }
+
+  .footer > div, .footer > div > h4 {
+    background-color: var(--bg-color2);
+  }
+}
