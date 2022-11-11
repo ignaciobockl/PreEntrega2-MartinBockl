@@ -104,6 +104,30 @@ a {
 
 .presentation {
   text-align: justify;
+  padding: 10px;
+}
+
+.trailer_frame_footer {
+  height: 280px;
+  width: 100%;
+}
+
+.trailer_frame {
+  height: 600px;
+  width: 100%;
+}
+
+.trailer_title {
+  color: var(--bg-white);
+  text-align: center;
+
+  -webkit-text-stroke: 1.2px var(--bg-black);
+  font-size: 2rem;
+}
+
+.trailer_subTitle {
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 ul li {
@@ -196,18 +220,7 @@ ul li {
     width: 100%;
   }
 
-  .trailer_title {
-    color: var(--bg-white);
-    text-align: center;
-
-    -webkit-text-stroke: 1.2px var(--bg-black);
-    font-size: 2rem;
-  }
-
-  .trailer_subTitle {
-    text-align: center;
-    font-size: 1.5rem;
-  }
+  
 
   .presentation {
     grid-area: 'Presentation';
